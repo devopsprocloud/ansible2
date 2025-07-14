@@ -1,6 +1,6 @@
 - name: advanced loop
   hosts: localhost
-  become: yes. 
+  become: yes
   tasks: 
     - name: Installing and Uninstalling teh packages using Advanced loops 
       ansible.builtin.package:
