@@ -1,0 +1,29 @@
+- name: Running data types 
+  hosts: localhost 
+  vars:
+    NAME: Prem # Key value pair type
+    SKILLS: # List type
+    - DevOps
+    - Aws
+    - Linux  
+    EXPERIENCE: # Map Type
+      DevOps: 7
+      AWS: 6 
+      Docker: 4
+    TRAINER: True #Boolean 
+  taks:
+    - name: print key value pair
+      ansible.builtin.debug:
+        msg: "Hello My name is {{NAME}}"
+        
+    - name: print List type 
+      ansible.builtin.debug:
+        msg: "These are my Skills {{SKILLS}}"
+
+    - name: print map type 
+      ansible.builtin.debug:
+        msg: "And this is my Experience {{EXPERIENCE}}"
+
+    - name: print Boolean
+      ansible.builtin.debug:
+        msg: "Is she a trainer ? : {{TRAINER}}"
