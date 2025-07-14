@@ -3,7 +3,7 @@
   become: yes
   tasks: 
     - name: Installing packages with loop 
-      ansible.builtin.packages:
+      ansible.builtin.package:
         name: "{{item}}"
         state: present 
       loop:
@@ -11,7 +11,7 @@
       - postfix
       - mysql 
     - name: Startingthe services with loop 
-      ansible.builtin.services:
+      ansible.builtin.service:
         name: "{{item}}"
         state: started 
       loop: 
