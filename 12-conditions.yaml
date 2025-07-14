@@ -13,4 +13,9 @@
     - name: print exit status of 
       ansible.builtin.debug:
         msg: "Exit status is: {{USER.rc}}"
+
+    - name: create roboshop user
+      ansible.builtin.user:
+        name: roboshop
+      when: USER.rc ! = 0 
       
