@@ -11,11 +11,11 @@
       AWS: 6 
       Docker: 4
     TRAINER: True #Boolean 
-  taks:
+  tasks:
     - name: print key value pair
       ansible.builtin.debug:
         msg: "Hello My name is {{NAME}}"
-        
+
     - name: print List type 
       ansible.builtin.debug:
         msg: "These are my Skills {{SKILLS}}"
