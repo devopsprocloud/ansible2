@@ -1,6 +1,6 @@
 - name: Variables from Prompt
   hosts: localhost 
-  vars_fprompt:
+  vars_prompt:
     - name: USERNAME
       prompt: please enter your username 
       private: false 
