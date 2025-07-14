@@ -12,4 +12,8 @@
         name: nginx
         state: started 
 
+    - name: Output
+      ansible.builtin.debug:
+        msg: "Hello, Nginx installation is complete"
+
   
